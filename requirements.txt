@@ -1,25 +1,38 @@
-# Core Dependencies
 fastapi==0.95.2
 uvicorn[standard]==0.22.0
 python-multipart==0.0.6
 pydantic==2.6.0
-
-# Data Science
 pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.3.2
 joblib==1.3.2
-
-# Visualization
+scipy==1.11.4
 matplotlib==3.7.1
 seaborn==0.12.2
-
-# ML Explanation (optional)
-shap==0.43.5
-
-# Testing
+requests==2.31.0
 pytest==7.4.0
 httpx==0.24.1
-
-# Utilities
 python-dotenv==1.0.0
+```
+
+### File: `.gitignore`
+```
+__pycache__/
+*.py[cod]
+.Python
+venv/
+env/
+*.log
+.DS_Store
+.vscode/
+.idea/
+models/*.joblib
+logs/*.log
+```
+
+### File: `.env.example`
+```
+API_HOST=0.0.0.0
+API_PORT=8000
+DEBUG=True
+FRONTEND_PORT=3000

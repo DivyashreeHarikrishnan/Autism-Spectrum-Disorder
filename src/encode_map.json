@@ -1,14 +1,44 @@
 {
   "features": [
-    {"name": "eye_contact", "question": "Does the child make eye contact during interactions?"},
-    {"name": "responds_name", "question": "Does the child respond when their name is called?"},
-    {"name": "pointing", "question": "Does the child point to objects to show interest?"},
-    {"name": "pretend_play", "question": "Does the child engage in pretend/symbolic play?"},
-    {"name": "repetitive_behaviour", "question": "Does the child show repetitive movements (hand-flapping, rocking)?"},
-    {"name": "sensory_sensitivity", "question": "Does the child show sensitivity to sounds, textures, lights, or touch?"},
-    {"name": "plays_alone", "question": "Does the child prefer to play alone rather than with others?"},
-    {"name": "gestures", "question": "Does the child use gestures (waving, nodding, showing objects)?"},
-    {"name": "delayed_speech", "question": "Does the child have delayed speech or use very few words compared to peers?"},
-    {"name": "restricted_interests", "question": "Does the child have intense interest in specific objects or topics?"}
+    {
+      "name": "eye_contact",
+      "question": "Does the child make eye contact during interactions?"
+    },
+    {
+      "name": "responds_name",
+      "question": "Does the child respond when their name is called?"
+    },
+    {
+      "name": "points_to_objects",
+      "question": "Does the child point to objects to show interest?"
+    },
+    {
+      "name": "pretend_play",
+      "question": "Does the child engage in pretend/symbolic play?"
+    },
+    {
+      "name": "repetitive_behaviour",
+      "question": "Does the child show repetitive movements?"
+    },
+    {
+      "name": "sensory_sensitivity",
+      "question": "Does the child show sensitivity to sounds, textures, lights?"
+    },
+    {
+      "name": "prefers_alone",
+      "question": "Does the child prefer to play alone?"
+    },
+    {
+      "name": "gestures",
+      "question": "Does the child use gestures?"
+    },
+    {
+      "name": "delayed_speech",
+      "question": "Does the child have delayed speech?"
+    },
+    {
+      "name": "restricted_interests",
+      "question": "Does the child have intense interest in specific objects?"
+    }
   ]
 }

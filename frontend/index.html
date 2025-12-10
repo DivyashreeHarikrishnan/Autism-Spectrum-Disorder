@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASD Early Screening Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🧩</span>
+                    <span class="logo-text">ASD Screening</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Screening</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <section id="heroSection" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Early ASD Screening Tool</h1>
+                    <p class="hero-subtitle">A simple 10-question assessment for parents and caregivers</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">90%+</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">Questions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2 min</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="introSection" class="intro-section">
+                <div class="intro-card">
+                    <div class="intro-icon">ℹ️</div>
+                    <h2>About This Screening Tool</h2>
+                    <p>This tool uses machine learning to help identify early signs of Autism Spectrum Disorder (ASD) in toddlers.</p>
+                    
+                    <div class="info-boxes">
+                        <div class="info-box">
+                            <span class="info-icon">👶</span>
+                            <h3>Age Range</h3>
+                            <p>18-36 months</p>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-icon">⏱️</span>
+                            <h3>Quick</h3>
+                            <p>2-3 minutes</p>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-icon">🔒</span>
+                            <h3>Private</h3>
+                            <p>Not stored</p>
+                        </div>
+                    </div>
+
+                    <div class="disclaimer">
+                        <strong>⚠️ Important:</strong> This is a screening tool only, NOT a diagnostic test. Always consult healthcare professionals.
+                    </div>
+
+                    <button class="btn btn-primary btn-large" onclick="startScreening()">
+                        Start Screening →
+                    </button>
+                </div>
+            </section>
+
+            <section id="questionsSection" class="questions-section hidden">
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span id="progressText">Question 0 of 10</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div id="questionsContainer" class="questions-container"></div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="resetScreening()">Reset</button>
+                    <button class="btn btn-primary" id="submitBtn" onclick="submitAnswers()" disabled>Submit →</button>
+                </div>
+            </section>
+
+            <section id="loadingSection" class="loading-section hidden">
+                <div class="loading-content">
+                    <div class="spinner"></div>
+                    <h3>Analyzing Responses...</h3>
+                    <p>Processing your answers</p>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="results-section hidden"></section>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 ASD Screening Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+Autism Dataset Information
+==========================
+
+Dataset: autism_dataset.csv
+Total Samples: 1000
+Features: 10 behavioral indicators
+Target: Binary classification (0=No ASD, 1=ASD)
+
+Features:
+1. eye_contact - Does child make eye contact? (0/1)
+2. responds_name - Responds to name? (0/1)
+3. points_to_objects - Points to show interest? (0/1)
+4. pretend_play - Engages in pretend play? (0/1)
+5. repetitive_behaviour - Shows repetitive behaviors? (0/1)
+6. sensory_sensitivity - Sensory sensitivity present? (0/1)
+7. prefers_alone - Prefers solitary play? (0/1)
+8. gestures - Uses gestures? (0/1)
+9. delayed_speech - Speech delay? (0/1)
+10. restricted_interests - Narrow/intense interests? (0/1)
+
+Target Variable:
+- label: 0 = No ASD, 1 = ASD indicators present
+
+Class Distribution:
+- Approximately balanced dataset
+- ~50% positive cases, ~50% negative cases
+
+Data Source: Synthetic behavioral assessment data
+Usage: Training ML models for ASD screening

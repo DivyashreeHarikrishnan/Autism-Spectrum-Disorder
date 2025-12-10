@@ -1,47 +1,41 @@
-# Autism Spectrum Disorder Detection System
-
-## Overview
-Machine Learning-based early screening tool for ASD in toddlers using behavioral indicators.
-
-## Features
-- 10-question behavioral assessment
-- 90%+ accuracy ML model
-- Real-time risk classification
-- Doctor recommendation system
+# ASD Detection System
 
 ## Quick Start
 
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
+1. Install dependencies:
+```
+   pip install -r requirements.txt
 ```
 
-### 2. Train Model
-```bash
-cd src
-python train_model.py
+2. Train model:
+```
+   cd src
+   python train_model.py
 ```
 
-### 3. Start Backend
-```bash
-cd src
-uvicorn api:app --reload --port 8000
+3. Start backend:
+```
+   cd src
+   uvicorn api:app --reload --port 8000
 ```
 
-### 4. Open Frontend
-```bash
-cd frontend
-python -m http.server 3000
+4. Start frontend (new terminal):
 ```
-Visit: http://localhost:3000
+   cd frontend
+   python -m http.server 3000
+```
 
-## Technology Stack
-- **Backend**: FastAPI, scikit-learn
-- **Frontend**: HTML5, CSS3, JavaScript
-- **ML Models**: Random Forest, Gradient Boosting, SVM, Logistic Regression
+5. Open browser: http://localhost:3000
+```
 
-## Project Structure
-See folder structure documentation for details.
+---
 
-## License
-MIT License
+## STEP 2: Data Directory
+
+### File: `data/data_info.txt`
+```
+Autism Dataset Information
+Dataset: autism_dataset.csv
+Total Samples: 1000
+Features: 10 behavioral indicators
+Target: Binary (0=No ASD, 1=ASD)

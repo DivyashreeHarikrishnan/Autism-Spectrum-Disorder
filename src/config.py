@@ -1,10 +1,16 @@
-# src/config.py
 import os
+from pathlib import Path
 
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DATA_DIR = os.path.join(BASE_DIR, "data")
-MODEL_DIR = os.path.join(BASE_DIR, "models")
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = BASE_DIR / "data"
+MODEL_DIR = BASE_DIR / "models"
 
-DATA_CSV = os.path.join(DATA_DIR, "autism_dataset.csv")
-MODEL_PATH = os.path.join(MODEL_DIR, "rf_model.joblib")
-PREPROCESSOR_PATH = os.path.join(MODEL_DIR, "preprocessor.joblib")
+DATA_CSV = DATA_DIR / "autism_dataset.csv"
+MODEL_PATH = MODEL_DIR / "asd_model.joblib"
+FEATURES_PATH = MODEL_DIR / "features_list.joblib"
+METRICS_PATH = MODEL_DIR / "metrics.json"
+
+API_HOST = "0.0.0.0"
+API_PORT = 8000
+RANDOM_STATE = 42
+TEST_SIZE = 0.20
