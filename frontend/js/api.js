@@ -1,27 +1,14 @@
-const API_BASE_URL = 'http://localhost:8000';
+async function sendPrediction(data) {
+    try {
+        const res = await fetch("http://127.0.0.1:8000/predict", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        });
 
-const apiService = {
-    async getQuestions() {
-        try {
-            const response = await fetch(`${API_BASE_URL}/questions`);
-            const data = await response.json();
-            return { success: true, data: data.questions };
-        } catch (error) {
-            return { success: false, error: error.message };
-        }
-    },
-
-    async submitScreening(answers) {
-        try {
-            const response = await fetch(`${API_BASE_URL}/predict`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(answers)
-            });
-            const data = await response.json();
-            return { success: true, data };
-        } catch (error) {
-            return { success: false, error: error.message };
-        }
+        return await res.json();
+    } catch (error) {
+        console.error("API Error:", error);
+        return { error: "Unable to connect to the server" };
     }
-};
+}
